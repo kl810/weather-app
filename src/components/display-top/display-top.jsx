@@ -1,6 +1,7 @@
 import './display-top.css';
 import { useEffect, useState } from 'react';
 import { getWeatherToday } from '../../api/tomorrow.io/mock';
+import { format } from 'date-fns';
 
 
 function DisplayTop () {
@@ -38,7 +39,7 @@ console.log(currentWeather.time?.toDateString())
                 <div className="date col-6 d-flex justify-content-end">
                     <p className="text-end">
                         Weather <br />
-                        {currentWeather.time?.toDateString()} <br />
+                        {currentWeather.time && format(currentWeather.time, 'eee dd MMM HH:mm')} <br /> {/* {currentWeather.time?.toDateString()} */}
                         Cloudy <br />
                     </p>
                 </div>                
