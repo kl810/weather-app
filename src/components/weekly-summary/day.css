@@ -1,0 +1,12 @@
+.tempMax, .tempMin {
+    display: inline;
+    margin: 5px;
+}
+
+.tempMin {
+    color: grey;
+}
+
+.icon {
+    font-size: 30px;
+}

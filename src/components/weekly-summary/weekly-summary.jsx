@@ -1,11 +1,15 @@
 import './weekly-summary.css';
+import Day from './day';
 
-function WeeklySummary() {
+function WeeklySummary(dailyWeather) {
+  
+
     return (
         <div className="weekly-summary">
-            <p>weekly summary</p>
+            {/* {dailyWeather.map((day, i) => <Day key={i} day={day}/>)} */}
+
         </div>
     )
 }
 
-export default WeeklySummary
+export default WeeklySummary;

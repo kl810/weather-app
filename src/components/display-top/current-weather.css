@@ -6,3 +6,7 @@
 .date {
     font-size: 1rem;
 }
+
+img {
+    display: inline-block;
+}
