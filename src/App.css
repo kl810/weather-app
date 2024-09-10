@@ -14,7 +14,7 @@ body {
   border: solid black;
   padding: 10px;
   margin: 100px auto;    
-  max-width: 500px;
-  max-height: 500px; /*Need to make responsive - increase height as items added to the list*/
+  max-width: 800px;
+  max-height: 800px; /*Need to make responsive - increase height as items added to the list*/
 
 }

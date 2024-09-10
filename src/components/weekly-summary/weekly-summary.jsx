@@ -1,12 +1,13 @@
 import './weekly-summary.css';
 import Day from './day';
 
-function WeeklySummary(dailyWeather) {
-  
+function WeeklySummary({dailyWeather}) {
+    
+    // console.log(dailyWeather)
 
     return (
         <div className="weekly-summary">
-            {/* {dailyWeather.map((day, i) => <Day key={i} day={day}/>)} */}
+            {dailyWeather && dailyWeather.map((day, i) => <Day key={i} day={day}/>)}
 
         </div>
     )

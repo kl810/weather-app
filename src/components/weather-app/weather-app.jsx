@@ -6,7 +6,7 @@ import WeeklySummary from '../weekly-summary/weekly-summary';
 import { getWeatherData } from '../../api/openweathermap/mock';
 
 
-export default function WeatherApp (){
+export default function WeatherApp () {
 
     const [weatherData, setWeatherData] = useState({})
 
@@ -24,7 +24,9 @@ export default function WeatherApp (){
         <div>
             <CurrentWeather currentWeather={weatherData.current}/>
             <HourlyTrend hourlyWeather={weatherData.hourly}/>
-            <WeeklySummary dailyWeather={weatherData.daily}/>
+            <WeeklySummary dailyWeather={weatherData.daily} selected={false}/>
         </div>
     );
 }
+
+
