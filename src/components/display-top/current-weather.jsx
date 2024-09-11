@@ -1,17 +1,17 @@
+import { getWeatherIcon } from '../../helpers/fontawesome-icons';
 import './current-weather.css';
 import { format, fromUnixTime } from 'date-fns';
 
 
 
 function CurrentWeather ({currentWeather}) {
-    const icon = `http://openweathermap.org/img/w/${currentWeather?.weather[0].icon}.png`;
 
     return (
         <div className="container-fluid w-100">
             <div className="row"> 
                 <div className="temperature col-2 d-flex inline text-center">
-                    {/* <i className="fa-solid fa-cloud"></i> */}
-                    <img style={{width: '50px', height:'auto'}} src= {icon} alt="weather icon" />
+                    {currentWeather && getWeatherIcon(currentWeather.weather[0].id)}
+                    {/* <img style={{width: '50px', height:'auto'}} src= {icon} alt="weather icon" /> */}
                     <p>{Math.round(currentWeather?.temp)}°C</p>
                     
                 </div>

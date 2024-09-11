@@ -24,7 +24,7 @@ export default function WeatherApp () {
         <div>
             <CurrentWeather currentWeather={weatherData.current}/>
             <HourlyTrend hourlyWeather={weatherData.hourly}/>
-            <WeeklySummary dailyWeather={weatherData.daily} selected={false}/>
+            <WeeklySummary dailyWeather={weatherData.daily}/>
         </div>
     );
 }
