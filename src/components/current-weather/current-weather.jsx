@@ -1,6 +1,6 @@
-import { getWeatherIcon } from '../../helpers/fontawesome-icons';
 import './current-weather.css';
 import { format, fromUnixTime } from 'date-fns';
+import { getWeatherIcon } from '../../helpers/fontawesome-icons';
 
 
 
@@ -12,7 +12,7 @@ function CurrentWeather ({currentWeather}) {
                 <div className="temperature col-2 d-flex inline text-center">
                     {currentWeather && getWeatherIcon(currentWeather.weather[0].id)}
                     {/* <img style={{width: '50px', height:'auto'}} src= {icon} alt="weather icon" /> */}
-                    <p>{Math.round(currentWeather?.temp)}°C</p>
+                    <p>{Math.round(currentWeather?.temp)}&deg;C</p>
                     
                 </div>
                 <div className="summary col-2">
@@ -27,7 +27,7 @@ function CurrentWeather ({currentWeather}) {
                         Weather <br />
                         {currentWeather && format(fromUnixTime(currentWeather.dt), "iii dd MMM HH:mm")} <br /> 
                         {/* Check if 'currentWeather' is true - then execute following function */}
-                        {currentWeather && currentWeather.weather[0].main} <br />
+                        {currentWeather && currentWeather.weather[0].description} <br />
                     </p>
                 </div>                
             </div>

@@ -3,6 +3,7 @@ import { format, fromUnixTime } from 'date-fns';
 import { getWeatherIcon } from '../../helpers/fontawesome-icons';
 
 function Day({day}) {
+
     return (
         <div>
             <div className="day">{format(fromUnixTime(day.dt), 'eee')}</div> 
