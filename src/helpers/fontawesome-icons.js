@@ -6,31 +6,31 @@ export function getWeatherIcon(iconId) {
 
 
     if (iconId >= 200 && iconId <= 232) {
-        return <i className="fa-solid fa-cloud-bolt"></i>
+        return <i class="bi bi-cloud-lightning-rain-fill"></i>
     }
     if (iconId >= 300 && iconId <= 321) {
-        return <i className="fa-solid fa-cloud-rain"></i>
+        return <i class="bi bi-cloud-drizzle-fill"></i>
     }
     if (iconId >= 500 && iconId <= 531) {
-        return <i className="fa-solid fa-cloud-showers-heavy"></i>
+        return <i class="bi bi-cloud-rain-heavy-fill"></i>
     }
     if (iconId >= 600 && iconId <= 622) {
-        return <i className="fa-regular fa-snowflake"></i>
+        return <i class="bi bi-snow2"></i>
     }
     if (iconId >= 701 && iconId <= 771) {
-        return <i className="fa-solid fa-smog"></i>
+        return <i class="bi bi-cloud-haze2-fill"></i>
     }
     if (iconId === 781) {
-        return <i className="fa-solid fa-tornado"></i>
+        return <i class="bi bi-tornado"></i>
     }
     if (iconId === 800) {
-        return <i className="fa-regular fa-sun"></i>
+        return <i class="bi bi-sun-fill"></i>
     }
     if (iconId === 801 || iconId === 802) {
-        return <i className="fa-solid fa-cloud-sun"></i>
+        return <i class="bi bi-cloud-sun-fill"></i>
     }
     if (iconId === 803 || iconId === 804) {
-        return <i className="fa-solid fa-cloud"></i>
+        return <i class="bi bi-cloudy-fill"></i>
     }
 
 

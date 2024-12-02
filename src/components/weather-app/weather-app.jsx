@@ -11,7 +11,6 @@ export default function WeatherApp () {
     const [city, setCity] = useState('London')
     const [weatherData, setWeatherData] = useState({});
 
-
     useEffect(() => {
       // Load weather data AFTER we have coordinates
       
