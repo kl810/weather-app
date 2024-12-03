@@ -4,31 +4,30 @@ import { getWeatherIcon } from '../../helpers/fontawesome-icons';
 
 
 
-function CurrentWeather ({currentWeather}) {
+function CurrentWeather ({currentWeather, city}) {
 
     return (
         <div className="container-fluid w-100">
             <div className="row"> 
-                <div className="temperature col-2 d-flex inline text-center">
+                <div className="temperature col-2 d-flex inline text-center space-between">
                     {currentWeather && getWeatherIcon(currentWeather.weather[0].id)}
-                    {/* <img style={{width: '50px', height:'auto'}} src= {icon} alt="weather icon" /> */}
-                    <p>{Math.round(currentWeather?.temp)}&deg;C</p>
+                    <p>{Math.round(currentWeather?.temp)}<sup>&deg;C</sup></p>
                     
                 </div>
-                <div className="summary col-2">
+                <div className="summary col-2 text-start">
                     <p>
                         UVI: {currentWeather?.uvi} <br />
                         Humidity: {currentWeather?.humidity}% <br />
                         Wind: {currentWeather?.wind_speed}mph <br />
                     </p>
                 </div>
-                <div className="date col-8 d-flex justify-content-end">
-                    <p className="text-end">
-                        Weather <br />
+                <div className="col-8 d-flex justify-content-end">
+                    <div className="date text-end">
+                        <p>{city}</p>
                         {currentWeather && format(fromUnixTime(currentWeather.dt), "iii dd MMM HH:mm")} <br /> 
                         {/* Check if 'currentWeather' is true - then execute following function */}
                         {currentWeather && currentWeather.weather[0].description} <br />
-                    </p>
+                    </div>
                 </div>                
             </div>
 

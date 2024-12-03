@@ -1,4 +1,4 @@
-
+import './input-city.css'
 
 function InputCity({city, setCity}) {
 
@@ -13,7 +13,7 @@ function InputCity({city, setCity}) {
 
 
     return(
-        <div>
+        <div className="input-wrapper">
             <form onSubmit={handleSubmit}>
                 <input
                 type="text"
@@ -21,7 +21,7 @@ function InputCity({city, setCity}) {
                 value={city}
                 onChange={handleInputChange}
                 />
-                <button type="submit">Get Weather</button>
+                <button className="search-btn" type="submit"><i class="bi bi-search"></i></button>
             </form>
         </div>
     )

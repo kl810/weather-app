@@ -1,13 +1,23 @@
+.temperature {
+    font-size: 2rem;
+}
+
+.temperature p {
+    padding-left: 10px;
+}
 
 .summary {
     font-size: 0.9rem;
-
+    color:#686868;
 }
 
 .date {
     font-size: 1rem;
+    text-transform: capitalize;
 }
 
-img {
-    display: inline-block;
+.date p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
 }

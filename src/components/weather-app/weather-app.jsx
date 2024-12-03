@@ -29,7 +29,7 @@ export default function WeatherApp () {
     return (
         <div>
             <InputCity city={city} setCity={setCity}/>
-            <CurrentWeather currentWeather={weatherData.current}/>
+            <CurrentWeather currentWeather={weatherData.current} city={city}/>
             <HourlyTrend hourlyWeather={weatherData.hourly}/>
             <WeeklySummary dailyWeather={weatherData.daily}/>
         </div>
