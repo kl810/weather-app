@@ -16,6 +16,11 @@ export default function WeatherApp () {
       
       const loadWeatherData = async () => {
         const cityWeather = await openWeatherApi.getCityData(city)
+        console.log(cityWeather)
+        if (cityWeather.cod === '404') {
+          alert('City not found. Please check for correct spelling of city.')
+          return
+        }
         const weather = await openWeatherApi.getWeatherData(cityWeather.coord.lat, cityWeather.coord.lon)
         setWeatherData(weather)
       }
@@ -28,7 +33,7 @@ export default function WeatherApp () {
 
     return (
         <div>
-            <InputCity city={city} setCity={setCity}/>
+            <InputCity setCity={setCity}/>
             <CurrentWeather currentWeather={weatherData.current} city={city}/>
             <HourlyTrend hourlyWeather={weatherData.hourly}/>
             <WeeklySummary dailyWeather={weatherData.daily}/>
