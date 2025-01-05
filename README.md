@@ -1,5 +1,5 @@
 # Weather-Forecast-App Project
-A Weather Forecast App created with React.js and Chart.js.
+A Weather Forecast App that includes basic weather information for any city around the world.
 
 ![Screenshot of Weather App](public/weather-app.png)
 
