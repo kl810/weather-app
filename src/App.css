@@ -13,13 +13,16 @@ body {
 }
 
 .App {
+  margin: 50px;
+}
+
+.app-wrapper {
   text-align: center;
   background-color: #8bd8f5;
   background-image: linear-gradient(0deg, #8bd8f5 18%, #cff4fd 69%);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 30px;
   padding: 10px;
-  margin: 100px auto;    
-  max-width: 800px;
-  max-height: 800px; /*Need to make responsive - increase height as items added to the list*/
+  margin: 100px auto;
+  width: 800px;  
 }
